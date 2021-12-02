@@ -39,7 +39,8 @@ class URLModelAPIView(generics.ListAPIView):
         self.queryset = self.model.objects.all()
         self.serializer = kwargs.pop('serializer')
         return super().dispatch(request, *args, **kwargs)
-Then in your urls.py
+    
+# Then in your urls.py
 
 from django.urls import path
 from . import models, serializers, views
